@@ -53,8 +53,8 @@ Thumbs.db
 
 
 # generated files
-bin/
-gen/
+client/AndroSync/bin/
+client/AndroSync/gen/
 
 # Local configuration file (sdk path, etc)
 local.properties
