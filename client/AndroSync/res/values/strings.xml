@@ -3,5 +3,9 @@
 
     <string name="hello">Hello World, AndroSyncMain!</string>
     <string name="app_name">AndroSync</string>
+    <string name="stringTitle">AndroSync: A generic offline Android synchronizer</string>
+    <string name="ButtonSyncAll">"Sync All "</string>
+    <string name="stringOnClickNotifier">"Starting action.... "</string>
+    <string name="stringImageContentDesc">"Image representing contact synchronization with server. "</string>
 
 </resources>

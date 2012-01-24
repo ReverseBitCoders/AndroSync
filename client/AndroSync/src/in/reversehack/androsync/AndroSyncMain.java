@@ -9,5 +9,7 @@ public class AndroSyncMain extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_start);
+        
     }
+
 }
