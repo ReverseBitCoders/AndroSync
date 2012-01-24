@@ -4,3 +4,5 @@ Cross Platform Android Synchronization Manager
 This project intends to create an Android Synchronization Manager which
 can work in offline (over bluetooth, USB) as well as online mode (over 
 the internet).
+
+The project is released under GPLv2.
