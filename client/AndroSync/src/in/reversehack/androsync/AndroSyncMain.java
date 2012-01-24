@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -13,6 +14,7 @@ public class AndroSyncMain extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
     	
     	ImageButton imageButtonSyncContacts;
+    	Button buttonSyncAll;
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_start);
@@ -20,6 +22,8 @@ public class AndroSyncMain extends Activity implements OnClickListener {
         imageButtonSyncContacts = (ImageButton) findViewById(R.id.imageButtonSyncContacts);
         imageButtonSyncContacts.setOnClickListener(this);
         
+        buttonSyncAll = (Button) findViewById(R.id.buttonSyncAll);
+        buttonSyncAll.setOnClickListener(this);
         
     }
 

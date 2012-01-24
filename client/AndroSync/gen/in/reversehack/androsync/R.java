@@ -17,8 +17,8 @@ public final class R {
         public static final int plain_black_ori=0x7f020003;
     }
     public static final class id {
-        public static final int buttonSyncAll=0x7f050000;
-        public static final int imageButtonSyncContacts=0x7f050001;
+        public static final int buttonSyncAll=0x7f060000;
+        public static final int imageButtonSyncContacts=0x7f060001;
     }
     public static final class layout {
         public static final int screen_start=0x7f030000;
@@ -31,5 +31,8 @@ public final class R {
         public static final int stringOnClickNotifier=0x7f040004;
         public static final int stringTitle=0x7f040002;
         public static final int stringToastSyncWait=0x7f040006;
+    }
+    public static final class style {
+        public static final int image_button=0x7f050000;
     }
 }
