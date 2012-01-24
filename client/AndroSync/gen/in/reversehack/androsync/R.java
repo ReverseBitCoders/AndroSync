@@ -30,5 +30,6 @@ public final class R {
         public static final int stringImageContentDesc=0x7f040005;
         public static final int stringOnClickNotifier=0x7f040004;
         public static final int stringTitle=0x7f040002;
+        public static final int stringToastSyncWait=0x7f040006;
     }
 }

@@ -7,5 +7,6 @@
     <string name="ButtonSyncAll">"Sync All "</string>
     <string name="stringOnClickNotifier">"Starting action.... "</string>
     <string name="stringImageContentDesc">"Image representing contact synchronization with server. "</string>
+    <string name="stringToastSyncWait">Beginning Synchronization...</string>
 
 </resources>
