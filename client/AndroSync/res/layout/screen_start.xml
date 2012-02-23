@@ -4,29 +4,22 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@string/stringTitle"
+    <Button
+        android:id="@+id/buttonSyncContacts"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/stringTitle"
-        android:textSize="18dp" />
+        android:text="@string/stringSyncContacts" android:layout_marginTop="15dp" android:layout_marginBottom="15dp"/>
 
     <Button
-        android:id="@+id/buttonSyncAll"
+        android:id="@+id/buttonSyncSms"
         android:layout_width="fill_parent"
-        android:layout_height="38dp"
-        android:background="@drawable/plain_black_ori"
-        android:text="@string/ButtonSyncAll"
-        android:textColor="#FBFBFB" />
+        android:layout_height="wrap_content"
+        android:text="Synchronize SMS" android:layout_marginBottom="15dp"/>
 
-    <ImageButton
-        android:id="@+id/imageButtonSyncContacts"
-        android:layout_margin="15dp"
-        android:contentDescription="@string/stringImageContentDesc"
-        android:src="@drawable/address_book" 
-        
-        style="@style/image_button"
-        />
+    <Button
+        android:id="@+id/buttonSyncNotes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Synchronize Notes" android:layout_marginBottom="15dp"/>
 
 </LinearLayout>
