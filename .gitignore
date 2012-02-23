@@ -21,8 +21,8 @@
 
 # Generated code #
 ##################
-*/gen/*
-*/bin/*
+gen/
+bin/
 
 # Logs and databases #
 ######################
@@ -40,3 +40,21 @@ Thumbs.db
 # Eclipse Artifacts #
 #####################
 .metadata/*
+
+# Android related #
+# #################
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+
+# generated files
+*/bin/*
+*/gen/*
+
+# Local configuration file (sdk path, etc)
+local.properties
