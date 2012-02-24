@@ -4,8 +4,8 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 
 public class ContactInfoAccumulator extends AbstractList<String>{
-	private ArrayList<String> contactNumbers = new ArrayList<String>(1);
-	private String contactName;
+	public ArrayList<String> contactNumbers = new ArrayList<String>(1);
+	public String contactName;
 	//private String contactEmail;
 	
 	public String getContactName() {

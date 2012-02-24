@@ -7,12 +7,13 @@ import android.content.ContentResolver;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
+import android.widget.Toast;
 
 public class SyncContactsActivity extends Activity {
 
-	ContactInfoAccumulator contactData = new ContactInfoAccumulator();
 	public ArrayList<ContactInfoAccumulator> contactDataList = new ArrayList<ContactInfoAccumulator>(2);
-	
+	ContactInfoAccumulator contactDataArray = new ContactInfoAccumulator();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class SyncContactsActivity extends Activity {
 				ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
 		if (contactCursor.getCount() > 0) {
 			while (contactCursor.moveToNext()) {
+				ContactInfoAccumulator contactData = new ContactInfoAccumulator(); // new object created here. 
+				
 				String contactId = contactCursor.getString(contactCursor
 						.getColumnIndex(ContactsContract.Contacts._ID));
 				String contactName = contactCursor
@@ -50,17 +53,24 @@ public class SyncContactsActivity extends Activity {
 									null);
 
 					while (multipleContactCursor.moveToNext()) {
+						
 						String multPhoneNumber = multipleContactCursor
 								.getString(multipleContactCursor
 										.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 						
 						contactData.setContactNumber(multPhoneNumber);
-
+						Log.d("AndroSync", "number is .. "+contactData.getContactNumber());
+						
 					}
+					contactDataList.add(contactData);
 					multipleContactCursor.close();
 				}
-			}
+				
+				Toast.makeText(this, "Name:"+contactData.getContactName()+"  Number:"+contactData.getContactNumber(), Toast.LENGTH_SHORT).show();					
+			
+			} //temporary contactData objects gets deleted here. 
 		}
-
+		
 	}
+	
 }
