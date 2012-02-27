@@ -14,12 +14,12 @@
         android:id="@+id/buttonSyncSms"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Synchronize SMS" android:layout_marginBottom="15dp"/>
+        android:text="@string/stringSyncSMS" android:layout_marginBottom="15dp"/>
 
     <Button
         android:id="@+id/buttonSyncNotes"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Synchronize Notes" android:layout_marginBottom="15dp"/>
+        android:text="@string/stringSyncNotes" android:layout_marginBottom="15dp"/>
 
 </LinearLayout>

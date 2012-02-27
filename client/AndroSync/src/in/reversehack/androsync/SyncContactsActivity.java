@@ -1,6 +1,12 @@
 package in.reversehack.androsync;
 
+import in.reversehack.androsync.R.string;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -13,6 +19,10 @@ import android.widget.Toast;
 public class SyncContactsActivity extends Activity {
 
 	public ArrayList<ContactInfoAccumulator> contactDataList = new ArrayList<ContactInfoAccumulator>(2);
+	public List<NameValuePair> contactNameValuePair = new ArrayList<NameValuePair>();
+	public String tempNumber = new String();
+	
+	
 	ContactInfoAccumulator contactDataArray = new ContactInfoAccumulator();
 	
 	@Override
@@ -21,6 +31,8 @@ public class SyncContactsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sync_contacts);
 		getContactNumbers();
+		ContactSyncUpdaterService startUpdaterService = new ContactSyncUpdaterService();
+		startUpdaterService.onCreate();
 	}
 
 	public void getContactNumbers() {
@@ -30,6 +42,7 @@ public class SyncContactsActivity extends Activity {
 				ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
 		if (contactCursor.getCount() > 0) {
 			while (contactCursor.moveToNext()) {
+				
 				ContactInfoAccumulator contactData = new ContactInfoAccumulator(); // new object created here. 
 				
 				String contactId = contactCursor.getString(contactCursor
@@ -38,7 +51,7 @@ public class SyncContactsActivity extends Activity {
 						.getString(contactCursor
 								.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 				
-			contactData.setContactName(contactName);
+			contactData.setContactName(contactName); //setting contact name into data structure
 				
 
 				if (Integer
@@ -51,6 +64,10 @@ public class SyncContactsActivity extends Activity {
 									ContactsContract.CommonDataKinds.Phone.CONTACT_ID
 											+ "=?", new String[] { contactId },
 									null);
+					
+					/*
+					 * http://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html
+					 */
 
 					while (multipleContactCursor.moveToNext()) {
 						
@@ -63,12 +80,14 @@ public class SyncContactsActivity extends Activity {
 						
 					}
 					contactDataList.add(contactData);
+					tempNumber = contactData.getContactNumber().toString();
+					contactNameValuePair.add(new BasicNameValuePair(contactName,tempNumber));
 					multipleContactCursor.close();
 				}
 				
-				Toast.makeText(this, "Name:"+contactData.getContactName()+"  Number:"+contactData.getContactNumber(), Toast.LENGTH_SHORT).show();					
+				Toast.makeText(this, "Name:" + contactData.getContactName()+"  Number:"+contactData.getContactNumber(), Toast.LENGTH_SHORT).show();					
 			
-			} //temporary contactData objects gets deleted here. 
+			} //temporary contactData objects gets destroyed here. 
 		}
 		
 	}
