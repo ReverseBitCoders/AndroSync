@@ -24,7 +24,6 @@ public class AndroSyncActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				// Toast.makeText(this,
 				// R.string.stringToastContactSync,Toast.LENGTH_SHORT).show();
 				Log.d("AndroSync", "Clicked Sync Contacts");

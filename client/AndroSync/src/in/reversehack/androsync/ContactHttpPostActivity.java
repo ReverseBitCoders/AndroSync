@@ -21,7 +21,9 @@ public class ContactHttpPostActivity extends SyncContactsActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		startHttpServiceMethod();
+		setContentView(R.layout.sync_contacts);
+		//startHttpServiceMethod();
+		
 	}
 
 	public void startHttpServiceMethod() {
@@ -33,6 +35,7 @@ public class ContactHttpPostActivity extends SyncContactsActivity {
 			UrlEncodedFormEntity basicContactFormEntity = new UrlEncodedFormEntity(
 					contactNameValuePair);
 			contactRequester.setEntity(basicContactFormEntity);
+			Log.d("androSyncService", "sending data from service... ");
 			HttpResponse httpResponse = contactHttpClient
 					.execute(contactRequester);
 
@@ -47,7 +50,7 @@ public class ContactHttpPostActivity extends SyncContactsActivity {
 			}
 			inBufferedReader.close();
 			String serverReturnedThis = stringBuff.toString();
-			Log.d("androSyncService", serverReturnedThis);
+			
 			
 			Toast.makeText(this, serverReturnedThis, Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
