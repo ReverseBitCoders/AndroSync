@@ -24,6 +24,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 /**
@@ -37,7 +38,9 @@ public class SyncContactsActivity extends Activity {
 	public List<NameValuePair> contactNameValuePair = new ArrayList<NameValuePair>();
 	public String tempNumber = new String();
 
-	public static String[] contactNames = new String[800];
+	public String[] contactNames = new String[100];
+	public String[] contactNames2 = new String[100];
+	public String temp = new String();
 
 	ContactInfoAccumulator contactDataArray = new ContactInfoAccumulator();
 
@@ -53,9 +56,16 @@ public class SyncContactsActivity extends Activity {
 	public void getContactNumbers() {
 		int i = 0;
 		ContentResolver contactContentResolver = getContentResolver();
+
 		Cursor contactCursor = contactContentResolver.query(
 				ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
+
 		if (contactCursor.getCount() > 0) {
+			/**
+			 * at this point the cursor pointer is set to -1 hence we use the
+			 * following while statement which auto increments the cursor
+			 * pointer to next ie 0.
+			 */
 			while (contactCursor.moveToNext()) {
 
 				ContactInfoAccumulator contactData = new ContactInfoAccumulator(); // new
@@ -65,6 +75,7 @@ public class SyncContactsActivity extends Activity {
 
 				String contactId = contactCursor.getString(contactCursor
 						.getColumnIndex(ContactsContract.Contacts._ID));
+
 				String contactName = contactCursor
 						.getString(contactCursor
 								.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
@@ -72,8 +83,10 @@ public class SyncContactsActivity extends Activity {
 				contactData.setContactName(contactName); // setting contact name
 															// into data
 															// structure
-				
+
 				contactData.setContactID(contactId);
+
+				contactNames[i] = contactName;
 
 				if (Integer
 						.parseInt(contactCursor.getString(contactCursor
@@ -82,9 +95,9 @@ public class SyncContactsActivity extends Activity {
 					Cursor multipleContactCursor = contactContentResolver
 							.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
 									null,
-									ContactsContract.CommonDataKinds.Phone.CONTACT_ID.toString()
-											+ "=?", new String[] { contactId },
-									null);
+									ContactsContract.CommonDataKinds.Phone.CONTACT_ID
+											.toString() + "=?",
+									new String[] { contactId }, null);
 
 					/*
 					 * http://docs.oracle.com/javase/tutorial/jdbc/basics/prepared
@@ -97,23 +110,23 @@ public class SyncContactsActivity extends Activity {
 								.getString(multipleContactCursor
 										.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
-						contactNames[i] = contactName;
-						i++;
 						contactData.setContactNumber(multPhoneNumber);
 						Log.d("AndroSync",
 								"number is .. "
 										+ contactData.getContactNumber());
 
 					}
+					temp = contactData.getContactNumber().toString();
+					Log.d("display temp", temp);
+					contactNames2[i] = contactNames+"\n"+temp;
+					Log.d("display string", contactNames2[i]);
+					i++;
+
 					contactDataList.add(contactData);
 
-					tempNumber = contactData.getContactNumber().toString();
-
-					contactNameValuePair.add(new BasicNameValuePair(
-							contactName, tempNumber));
 					Log.d("androSync", contactName + "number contact.. "
 							+ tempNumber);
-					Log.d("nameValuePair", contactNameValuePair.toString());
+
 					multipleContactCursor.close();
 				}
 
@@ -122,10 +135,10 @@ public class SyncContactsActivity extends Activity {
 						"Name:" + contactData.getContactName() + "  Number:"
 								+ contactData.getContactNumber(),
 						Toast.LENGTH_SHORT).show();
+				Log.d("androSync", "reached last");
 
-			}
+			} // contactData object destroyed here.
 		}
 
 	}
-
 }
