@@ -66,10 +66,14 @@ public class SyncContactsActivity extends Activity {
 		setContentView(R.layout.sync_contacts);
 		getContactNumbers();
 <<<<<<< HEAD
+<<<<<<< HEAD
 		startServiceHttp.onCreate(savedInstanceState);
 		
 =======
 		startActivity(new Intent(this, ContactListActivity.class));
+>>>>>>> testing
+=======
+		//startActivity(new Intent(this, ContactListActivity.class));
 >>>>>>> testing
 	}
 
@@ -117,7 +121,11 @@ public class SyncContactsActivity extends Activity {
 
 				contactData.setContactID(contactId);
 
+<<<<<<< HEAD
 				contactNames[i] = contactName;
+>>>>>>> testing
+=======
+				//contactNames[i] = contactName;
 >>>>>>> testing
 
 				if (Integer
@@ -157,10 +165,10 @@ public class SyncContactsActivity extends Activity {
 
 					}
 					temp = contactData.getContactNumber().toString();
-					Log.d("display temp", temp);
-					contactNames2[i] = contactNames+"\n"+temp;
-					Log.d("display string", contactNames2[i]);
-					i++;
+					//Log.d("display temp", temp);
+					//contactNames2[i] = contactNames+"\n"+temp;
+					//Log.d("display string", contactNames2[i]);
+					//i++;
 
 					contactDataList.add(contactData);
 <<<<<<< HEAD
@@ -175,7 +183,7 @@ public class SyncContactsActivity extends Activity {
 =======
 
 					Log.d("androSync", contactName + "number contact.. "
-							+ tempNumber);
+							+ temp);
 
 					multipleContactCursor.close();
 				}
