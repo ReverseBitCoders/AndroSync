@@ -25,13 +25,38 @@
                 <action android:name="android.intent.action.showSyncContacts" />
 
                 <category android:name="android.intent.category.DEFAULT" />
+<<<<<<< HEAD
             </intent-filter>
         </activity>
+=======
+            </intent-filter>
+        </activity>
+        <activity android:name=".ContactListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.showContactList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SmsSyncActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SmsSync" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+>>>>>>> testing
 
         <service android:name=".ContactSyncUpdaterService" >
         </service>
     </application>
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+>>>>>>> testing
 
 </manifest>

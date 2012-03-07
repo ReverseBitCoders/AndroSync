@@ -19,19 +19,29 @@ public class AndroSyncActivity extends Activity {
 		Button buttonSyncContacts = (Button) findViewById(R.id.buttonSyncContacts);
 		Button buttonSyncSMS = (Button) findViewById(R.id.buttonSyncSms);
 
-		// on click listener for sync contacts button
 		buttonSyncContacts.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				// Toast.makeText(this,
-				// R.string.stringToastContactSync,Toast.LENGTH_SHORT).show();
+
 				Log.d("AndroSync", "Clicked Sync Contacts");
 
 				String actionOfIntent = "android.intent.action.showSyncContacts";
 				Intent syncContactIntent = new Intent(actionOfIntent);
 				startActivity(syncContactIntent);
+
+			}
+		});
+
+		buttonSyncSMS.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Log.d("AndroSync", "Clicked Sync sms");
+
+				String actionOfIntent = "android.intent.action.SmsSync";
+				Intent syncSmsIntent = new Intent(actionOfIntent);
+				startActivity(syncSmsIntent);
 
 			}
 		});
