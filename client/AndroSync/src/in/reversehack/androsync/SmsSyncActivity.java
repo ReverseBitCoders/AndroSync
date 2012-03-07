@@ -17,6 +17,11 @@ public class SmsSyncActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		displaySms();
+
+	}
+
+	public void displaySms() {
 		ContentResolver sms_cr = getContentResolver();
 		Cursor sms_cursor = sms_cr.query(SMS_INBOX_URI, null, null, null, null);
 		startManagingCursor(sms_cursor);
@@ -28,7 +33,6 @@ public class SmsSyncActivity extends ListActivity {
 				sms_cursor, columns, names);
 
 		setListAdapter(adapter);
-
 	}
 
 }
