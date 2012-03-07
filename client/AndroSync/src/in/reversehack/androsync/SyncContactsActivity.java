@@ -50,7 +50,7 @@ public class SyncContactsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sync_contacts);
 		getContactNumbers();
-		startActivity(new Intent(this, ContactListActivity.class));
+		//startActivity(new Intent(this, ContactListActivity.class));
 	}
 
 	public void getContactNumbers() {
@@ -86,7 +86,7 @@ public class SyncContactsActivity extends Activity {
 
 				contactData.setContactID(contactId);
 
-				contactNames[i] = contactName;
+				//contactNames[i] = contactName;
 
 				if (Integer
 						.parseInt(contactCursor.getString(contactCursor
@@ -117,15 +117,15 @@ public class SyncContactsActivity extends Activity {
 
 					}
 					temp = contactData.getContactNumber().toString();
-					Log.d("display temp", temp);
-					contactNames2[i] = contactNames+"\n"+temp;
-					Log.d("display string", contactNames2[i]);
-					i++;
+					//Log.d("display temp", temp);
+					//contactNames2[i] = contactNames+"\n"+temp;
+					//Log.d("display string", contactNames2[i]);
+					//i++;
 
 					contactDataList.add(contactData);
 
 					Log.d("androSync", contactName + "number contact.. "
-							+ tempNumber);
+							+ temp);
 
 					multipleContactCursor.close();
 				}
