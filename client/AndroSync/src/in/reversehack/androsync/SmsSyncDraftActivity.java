@@ -5,6 +5,8 @@ import android.content.ContentResolver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.telephony.SmsMessage;
+import android.telephony.gsm.SmsManager;
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.SimpleCursorAdapter;
@@ -28,13 +30,13 @@ public class SmsSyncDraftActivity extends ListActivity {
 		startManagingCursor(sms_cursor);
 
 		String[] columns = new String[] { "body" };
-		Log.d("sms",columns[0]);
+
 		int[] names = new int[] { R.id.inbox_rows };
-		
+
 		adapter = new SimpleCursorAdapter(this, R.layout.sms_list_view,
 				sms_cursor, columns, names);
+
 		setListAdapter(adapter);
 	}
-
 
 }
