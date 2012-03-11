@@ -14,9 +14,12 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int analogClock1=0x7f050004;
+        public static final int analogClock1=0x7f050007;
         public static final int buttonSyncContacts=0x7f050000;
+        public static final int buttonSyncDrafts=0x7f050006;
+        public static final int buttonSyncInbox=0x7f050004;
         public static final int buttonSyncNotes=0x7f050002;
+        public static final int buttonSyncSentbox=0x7f050005;
         public static final int buttonSyncSms=0x7f050001;
         public static final int inbox_rows=0x7f050003;
     }
@@ -24,10 +27,14 @@ public final class R {
         public static final int list_view=0x7f030000;
         public static final int screen_start=0x7f030001;
         public static final int sms_list_view=0x7f030002;
-        public static final int sync_contacts=0x7f030003;
+        public static final int sms_sync=0x7f030003;
+        public static final int sync_contacts=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
+        public static final int buttonSyncDrafts=0x7f040009;
+        public static final int buttonSyncInbox=0x7f040007;
+        public static final int buttonSyncSentbox=0x7f040008;
         public static final int hello=0x7f040000;
         public static final int stringSyncContacts=0x7f040002;
         public static final int stringSyncNotes=0x7f040005;

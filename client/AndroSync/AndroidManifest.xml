@@ -41,7 +41,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".SmsSyncInboxActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SmsSyncInbox" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SmsSyncSentActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SmsSyncSent" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SmsSyncDraftActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SmsSyncDraft" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <service android:name=".ContactSyncUpdaterService" >
         </service>
     </application>
