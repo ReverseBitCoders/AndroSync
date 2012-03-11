@@ -8,5 +8,8 @@
     <string name="stringSyncSMS">Synchronize SMS</string>
     <string name="stringSyncNotes">Synchronize Notes</string>
     <string name="syncContactsManifestLabel">Contact Sync</string>
+    <string name="buttonSyncInbox">Sync Inbox</string>
+    <string name="buttonSyncSentbox">Sync Sentbox</string>
+    <string name="buttonSyncDrafts">Sync Drafts</string>
 
 </resources>

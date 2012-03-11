@@ -1,38 +1,63 @@
 package in.reversehack.androsync;
 
-import android.app.ListActivity;
-import android.content.ContentResolver;
-import android.database.Cursor;
-import android.net.Uri;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ListAdapter;
-import android.widget.SimpleCursorAdapter;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class SmsSyncActivity extends ListActivity {
-
-	private ListAdapter adapter;
-	private static final Uri SMS_INBOX_URI = Uri.parse("content://sms/inbox");
+public class SmsSyncActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sms_sync);
 
-		displaySms();
+		Button buttonSyncInbox = (Button) findViewById(R.id.buttonSyncInbox);
+		Button buttonSyncSentBox = (Button) findViewById(R.id.buttonSyncSentbox);
+		Button buttonSyncDrafts = (Button) findViewById(R.id.buttonSyncDrafts);
 
-	}
+		buttonSyncInbox.setOnClickListener(new OnClickListener() {
 
-	public void displaySms() {
-		ContentResolver sms_cr = getContentResolver();
-		Cursor sms_cursor = sms_cr.query(SMS_INBOX_URI, null, null, null, null);
-		startManagingCursor(sms_cursor);
+			@Override
+			public void onClick(View v) {
+				Log.d("AndroSync", "Clicked Sync sms inbox");
 
-		String[] columns = new String[] { "body" };
-		int[] names = new int[] { R.id.inbox_rows };
+				String actionOfIntent = "android.intent.action.SmsSyncInbox";
+				Intent syncSmsIntent = new Intent(actionOfIntent);
+				startActivity(syncSmsIntent);
 
-		adapter = new SimpleCursorAdapter(this, R.layout.sms_list_view,
-				sms_cursor, columns, names);
+			}
+		});
 
-		setListAdapter(adapter);
+		buttonSyncSentBox.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Log.d("AndroSync", "Clicked Sync sms sent");
+
+				String actionOfIntent = "android.intent.action.SmsSyncSent";
+				Intent syncSmsIntent = new Intent(actionOfIntent);
+				startActivity(syncSmsIntent);
+
+			}
+		});
+
+		buttonSyncDrafts.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Log.d("AndroSync", "Clicked Sync sms draftnt");
+
+				String actionOfIntent = "android.intent.action.SmsSyncDraft";
+				Intent syncSmsIntent = new Intent(actionOfIntent);
+				startActivity(syncSmsIntent);
+
+			}
+		});
+
 	}
 
 }
