@@ -33,9 +33,9 @@ public class SmsSyncInboxActivity extends ListActivity {
 				null);
 		startManagingCursor(sms_cursor);
 
-		String[] columns = new String[] { "address", "body" };
+		String[] columns = new String[] { "address", "body","date" };
 
-		int[] names = new int[] { R.id.inbox_sender_rows, R.id.inbox_rows };
+		int[] names = new int[] { R.id.inbox_sender_rows, R.id.inbox_rows,R.id.inbox_rows_date };
 
 		adapter = new SimpleCursorAdapter(this, R.layout.sms_list_view,
 				sms_cursor, columns, names);
