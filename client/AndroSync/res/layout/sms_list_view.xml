@@ -14,5 +14,10 @@
         android:id="@+id/inbox_rows"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
+    
+    <TextView
+        android:id="@+id/inbox_rows_date"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
 </LinearLayout>
