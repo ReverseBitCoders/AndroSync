@@ -16,3 +16,7 @@ SOURCES += main.cpp\
 HEADERS  += androsyncserver.h
 
 FORMS    += androsyncserver.ui
+
+RESOURCES += \
+    icons.qrc
+

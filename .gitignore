@@ -107,3 +107,4 @@ release/
 /lib/
 /doc/html
 /imports/
+*.autosave
