@@ -4,19 +4,23 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 TARGET = AndroSyncServer
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        androsyncserver.cpp
+        androsyncserver.cpp \
+    btserver.cpp
 
-HEADERS  += androsyncserver.h
+HEADERS  += androsyncserver.h \
+    btserver.h
 
 FORMS    += androsyncserver.ui
 
 RESOURCES += \
     icons.qrc
+
+
 
