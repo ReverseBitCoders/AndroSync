@@ -24,6 +24,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.Window;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
@@ -48,9 +49,11 @@ public class SyncContactsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.sync_contacts);
+		setProgressBarVisibility(true);
 		getContactNumbers();
-		//startActivity(new Intent(this, ContactListActivity.class));
+		// startActivity(new Intent(this, ContactListActivity.class));
 	}
 
 	public void getContactNumbers() {
@@ -130,11 +133,11 @@ public class SyncContactsActivity extends Activity {
 					multipleContactCursor.close();
 				}
 
-				Toast.makeText(
+				/*Toast.makeText(
 						this,
 						"Name:" + contactData.getContactName() + "  Number:"
 								+ contactData.getContactNumber(),
-						Toast.LENGTH_SHORT).show();
+						Toast.LENGTH_SHORT).show();*/
 				Log.d("androSync", "reached last");
 
 			} // contactData object destroyed here.

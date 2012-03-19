@@ -10,6 +10,8 @@ import android.widget.Button;
 
 public class AndroSyncActivity extends Activity {
 
+	BluetoothSync mBluetoothSync = new BluetoothSync();
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,7 @@ public class AndroSyncActivity extends Activity {
 
 		Button buttonSyncContacts = (Button) findViewById(R.id.buttonSyncContacts);
 		Button buttonSyncSMS = (Button) findViewById(R.id.buttonSyncSms);
+		Button buttonStartBluetooth = (Button) findViewById(R.id.buttonStartBluetooth);
 
 		buttonSyncContacts.setOnClickListener(new OnClickListener() {
 
@@ -42,6 +45,19 @@ public class AndroSyncActivity extends Activity {
 				String actionOfIntent = "android.intent.action.SmsSync";
 				Intent syncSmsIntent = new Intent(actionOfIntent);
 				startActivity(syncSmsIntent);
+
+			}
+		});
+
+		buttonStartBluetooth.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				String actionOfIntent = "android.intent.action.bluetoothAction";
+				Intent bluetoothIntent = new Intent(actionOfIntent);
+				startActivity(bluetoothIntent);
 
 			}
 		});
