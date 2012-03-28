@@ -25,10 +25,6 @@
                 <action android:name="android.intent.action.showSyncContacts" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-<<<<<<< HEAD
-            </intent-filter>
-        </activity>
-=======
             </intent-filter>
         </activity>
         <activity android:name=".ContactListActivity" >
@@ -45,9 +41,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
->>>>>>> testing
-=======
         <activity android:name=".SmsSyncInboxActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.SmsSyncInbox" />
@@ -65,7 +58,13 @@
         <activity android:name=".SmsSyncDraftActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.SmsSyncDraft" />
->>>>>>> testing
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity android:name=".BluetoothDeviceList" >
+            <intent-filter>
+                <action android:name="android.intent.action.bluetoothAction" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -75,11 +74,11 @@
     </application>
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-<<<<<<< HEAD
-=======
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_SMS" />
->>>>>>> testing
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    
 
 </manifest>

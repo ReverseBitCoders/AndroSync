@@ -13,26 +13,14 @@ import org.apache.http.message.BufferedHeader;
 
 import android.app.Activity;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
 import android.util.Log;
 import android.widget.Toast;
->>>>>>> testing
 
 public class ContactHttpPostActivity extends SyncContactsActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-		BufferedReader inBufferedReader = null;
-		try {
-			HttpClient contactHttpClient = new DefaultHttpClient();
-			HttpPost contactRequester = new HttpPost("some URL");
-			UrlEncodedFormEntity basicContactFormEntity = new UrlEncodedFormEntity(
-					contactNameValuePair);
-			contactRequester.setEntity(basicContactFormEntity);
-=======
 		setContentView(R.layout.sync_contacts);
 		//startHttpServiceMethod();
 		
@@ -48,7 +36,6 @@ public class ContactHttpPostActivity extends SyncContactsActivity {
 					contactNameValuePair);
 			contactRequester.setEntity(basicContactFormEntity);
 			Log.d("androSyncService", "sending data from service... ");
->>>>>>> testing
 			HttpResponse httpResponse = contactHttpClient
 					.execute(contactRequester);
 
@@ -63,13 +50,9 @@ public class ContactHttpPostActivity extends SyncContactsActivity {
 			}
 			inBufferedReader.close();
 			String serverReturnedThis = stringBuff.toString();
-<<<<<<< HEAD
-			System.out.println(serverReturnedThis);
-=======
 			
 			
 			Toast.makeText(this, serverReturnedThis, Toast.LENGTH_LONG).show();
->>>>>>> testing
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

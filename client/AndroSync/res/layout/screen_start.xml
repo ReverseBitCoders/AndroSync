@@ -17,9 +17,9 @@
         android:text="@string/stringSyncSMS" android:layout_marginBottom="15dp"/>
 
     <Button
-        android:id="@+id/buttonSyncNotes"
+        android:id="@+id/buttonStartBluetooth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/stringSyncNotes" android:layout_marginBottom="15dp"/>
+        android:text="@string/buttonStartBluetooth" android:layout_marginBottom="15dp"/>
 
 </LinearLayout>
