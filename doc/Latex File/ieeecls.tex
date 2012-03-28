@@ -45,10 +45,6 @@
 %----------------------------------------------------------------------
 \title{Android Synchronization Manager}
 
-% format author this way for journal articles.
-% MAKE SURE THERE ARE NO SPACES BEFORE A \member OR \authorinfo
-% COMMAND (this also means `don't break the line before these
-% commands).
 \author{Parikshit Ghodake, Imran Ahmed, Akshay Khole, Muneeb Shaikh \\
 Department of Computer Engineering, JSCOE \\
 University of Pune\\
@@ -58,15 +54,25 @@ University of Pune\\
 \maketitle               
 
 \begin{abstract} 
-This project aims at developing the Synchronization Manager for Android based devices. Since there isn't any generic Synchronization Manger for android which works on all platforms (Linux, Mac and Windows); this would help lots of people who work on two or more platforms. This Synchronization Manager would be divided into two parts as server and client.  The server would reside on PC and client would be on Android Device. Client will gather information which is to be synchronized.\\
-The current scenario insists users to send information to be backed up to google servers. Once this information is present with google, they have the right to sell/use that data in any way they want according to their “Terms of Service”. This hampers the users’ privacy. \\
-The primary purpose of this is to have offline synchronization. At later stages this can be extended to have online synchronization with services such as Ubuntu One for Linux.\\
-For offline syncing USB and Bluetooth may be used. If possible Wi-Fi can also be used. For communicating between server and client SyncML (Synchronization Markup Language) would be used.
+This project aims at developing the Synchronization Manager for Android based 
+devices. Since there isn't any generic Synchronization Manger for android which 
+works on all platforms (Linux, Mac and Windows); this would help lots of people who 
+work on two or more platforms. 
+%This Synchronization Manager would be divided into two parts as server and client. 
+%The server would reside on PC and client would be on Android Device. Client will 
+%gather information which is to be synchronized.
+The current scenario insists users to send information to be backed up to google 
+servers. Once this information is present with google, they have the right to sell/
+use that data in any way they want according to their “Terms of Service”. This 
+hampers the users’ privacy. The primary purpose of this is to have offline 
+synchronization. At later stages  this can be extended to have online 
+synchronization with services such as Ubuntu One for Linux. For offline syncing USB 
+and Bluetooth may be used. If possible Wi-Fi can also be used. For communicating 
+between server and client SyncML (Synchronization Markup Language) would be used.
 \end{abstract}
 
 %\begin{keywords}
-%Style file, \latexiie, Microsoft Word, IEEE Publications, Instrumentation
-%and Measurement Technology Conference, IMTC.
+% WRITE KEYWORD USED IN YOUR IEEE PAPER HERE
 %\end{keywords}
 
 %----------------------------------------------------------------------
@@ -74,12 +80,12 @@ For offline syncing USB and Bluetooth may be used. If possible Wi-Fi can also be
 %----------------------------------------------------------------------
 \section{Introduction}
 
-\PARstart All the popular mobile devices -- handheld computers, mobile phones, 
-pagers, laptops -- synchronize their data with network applications, desktop 
-calendars, and other locations where information is stored. This ability to access 
-and update information on the fly is key to the pervasive nature of mobile 
-computing. Yet, today, almost every device uses a different technology for 
-performing data synchronization.
+\PARstart All the popular mobile devices - handheld computers, mobile phones, 
+laptops  - synchronize their data with network applications, desktop  calendars, 
+and other locations where information is stored. This ability to access and update 
+information on the fly is key to the pervasive nature of mobile computing. Yet 
+today, almost every device uses a different technology for performing data 
+synchronization.
 
 A data synchronization protocol defines the workflow for communication during a
 data synchronization session when the mobile device is connected to the network.
