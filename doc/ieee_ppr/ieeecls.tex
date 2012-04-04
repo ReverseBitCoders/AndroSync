@@ -60,7 +60,7 @@ Data Synchronization, SyncML
 \end{keywords}
 
 %----------------------------------------------------------------------
-% SECTION I: Introduction
+% SECTION 1: Introduction to Android, synchronization
 %----------------------------------------------------------------------
 \section{Introduction}
 
@@ -86,9 +86,13 @@ programming language. Android has some of the following features as:
 Android relies on Linux version 2.6 for core system services such as security, 
 memory management, process management, network stack, and driver model. The kernel 
 also acts as an abstraction layer between the hardware and the rest of the software 
-stack. The Android software stack can be illustrated by the following diagram:\\
-\\
-\includegraphics[height=100mm, width= 89mm]{images/system-architecture}\\[1mm]
+stack. The Android software stack can be illustrated by the following diagram:
+
+\begin{figure}[h]
+ \includegraphics[height= 100mm, width= 0.5\textwidth]{images/system-architecture}
+ \caption{System Architecture of Android}
+ \centering
+\end{figure}
 
 Every Android application runs in its own process, with its own instance of the 
 Dalvik virtual machine. Dalvik has been written so that a device can run multiple 
@@ -98,11 +102,74 @@ and runs classes compiled by a Java language compiler that have been transformed
 into the \texttt{.dex} format by the included "dx" tool. The Dalvik VM relies on 
 the Linux kernel for underlying functionality such as threading and low-level 
 memory management.
+\\
 
-Data synchronization is the process of establishing consistency among data from a 
-source to a target data storage and vice versa and the continuous harmonization of 
-the data over time. It is fundamental to a wide variety of applications, including 
-file synchronization and mobile device synchronization.
+\textit{Data synchronization} is the process of establishing consistency among data 
+from a source to a target data storage and vice versa and the continuous 
+harmonization of the data over time. It is fundamental to a wide variety of 
+applications, including file synchronization and mobile device synchronization.
+
+Data synchronization is the process of making two sets of data look identical:
+
+% INSERT DATA SYNCHRONIZATION IMAGE HERE
+%\begin{figure}[h]
+% \includegraphics[height= 100mm, width= 0.5\textwidth]{images/system-architecture}
+% \caption{System Architecture of Android}
+% \centering
+%\end{figure}
+
+All mobile devices – handheld computers, mobile phones, pagers, laptops – need to 
+synchronize their data with the server where the information is stored. This 
+ability to access and update information on the fly is key to the pervasive nature 
+of mobile computing. Yet, today, almost every device uses a different technology 
+for performing data synchronization.
+
+By definition, mobile users are not always connected to a network and its stored 
+data.Users retrieve data from the network and store it on the mobile device, where 
+they access and manipulate the local copy of the data. Periodically, users 
+reconnect with the network to send any local changes back to the networked data 
+repository. Users also have the opportunity to learn about updates made to the 
+networked data while the device was disconnected. Occasionally, they need to 
+resolve conflicts among the updates made to the networked data. This reconciliation 
+operation – where updates are exchanged and conflicts are resolved – is known as 
+data synchronization.
+
+The data synchronization protocol would synchronize networked data with many
+different devices, including handheld computers, mobile phones, automotive 
+computers, and desktop PCs. A user could access and manipulate the same set of data 
+from different devices. For example, a user could read e-mail from either a 
+handheld or a mobile phone, and still maintain a consistent, updated record of 
+which messages had been read.
+
+%----------------------------------------------------------------------
+% SUB-SECTION 1.1: Main contribution of this paper
+%----------------------------------------------------------------------
+\subsection{Main contribution of this paper}
+In this paper, we propose an approach to an offline Android synchronization 
+manager, developed to address the issues of privacy when users need to synchronize 
+their data. AndroSync brings a concept of offline synchronization for android 
+devices. Offline synchronization means syncing data from Android phone to a desktop 
+pc means that do not require use to send personal information to any third party.
+
+Offline means of synchronization are syncing over bluetooth, USB data cable or if 
+possible using WI-FI. This means user does not need to be connected to the internet 
+for backing up data. In the primary stages, this project can be used as a backup 
+tool. It can be divided into the client and the server module. The client module is 
+an android application where as the server module is a desktop application. The 
+client module has the task of accessing all the data that is essential and send 
+that data to the server by means of bluetooth or USB or WiFi.
+
+The server , on the other hand which constantly keep listening to requests from 
+bluetooth devices. As soon as a devices requests connection, a common handshaking 
+procedure can be started and then the two devices can be paired for further 
+communication. 
+
+once the two devices are paired, the server can start receiving data from the 
+client. The main duty of the server is to maintain a record of all data received. 
+also according to timestamp on incoming data, the data should be sorted and stored. 
+in case of SMS, the messages can be categorized according to the name of the sender/
+receiver. 
+
 % EDITING DONE TILL HERE ONLY
 
 %----------------------------------------------------------------------
