@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class AndroSyncActivity extends Activity {
 
-	BluetoothSync mBluetoothSync = new BluetoothSync();
+	BluetoothDeviceList mBluetoothSync = new BluetoothDeviceList();
 
 	/** Called when the activity is first created. */
 	@Override

@@ -133,11 +133,11 @@ public class SyncContactsActivity extends Activity {
 					multipleContactCursor.close();
 				}
 
-				/*Toast.makeText(
+				Toast.makeText(
 						this,
 						"Name:" + contactData.getContactName() + "  Number:"
 								+ contactData.getContactNumber(),
-						Toast.LENGTH_SHORT).show();*/
+						Toast.LENGTH_SHORT).show();
 				Log.d("androSync", "reached last");
 
 			} // contactData object destroyed here.

@@ -8,32 +8,33 @@
         android:id="@+id/textViewPairedDevices"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="@string/stringPairedBluetoothDevices" />
+        android:text="@string/stringPairedBluetoothDevices"
+        android:visibility="gone" />
 
     <ListView
         android:id="@+id/listViewPairedDevices"
         android:layout_width="fill_parent"
-        android:layout_height="214dp" >
+        android:layout_height="178dp" >
     </ListView>
 
     <TextView
         android:id="@+id/textViewNonPairedDevices"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="@string/stringNonPairedBluetoothDevices" />
+        android:text="@string/stringNonPairedBluetoothDevices"
+        android:visibility="gone" />
 
     <ListView
         android:id="@+id/listViewNonPairedDevices"
         android:layout_width="fill_parent"
-        android:layout_height="190dp" >
+        android:layout_height="158dp" >
     </ListView>
 
     <Button
         android:id="@+id/buttonScanForDevices"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1.31"
         android:text="@string/buttonScanForBTDevices" />
 
 </LinearLayout>

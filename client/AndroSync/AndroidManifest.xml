@@ -62,7 +62,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-         <activity android:name=".BluetoothSync" >
+         <activity android:name=".BluetoothDeviceList" >
             <intent-filter>
                 <action android:name="android.intent.action.bluetoothAction" />
 

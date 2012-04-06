@@ -19,5 +19,6 @@
     <string name="stringSelectDevice">Select a device to connect... </string>
     <string name="stringNoDevicesFound">No bluetooth devics found ...</string>
     <string name="buttonStartBluetooth">Start Bluetooth Services</string>
+    <string name="buttonGetBtDeviceList">Get Bluetooth Device List</string>
 
 </resources>
