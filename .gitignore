@@ -44,6 +44,15 @@ Thumbs.db
 # Android related #
 # #################
 
+# Latex related #
+# #################
+*.aux
+*.lof
+*.log
+*.out
+*.toc
+*.pdf
+
 # built application files
 *.apk
 *.ap_
