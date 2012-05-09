@@ -26,5 +26,6 @@
 *.mtc
 *.mtc0
 *.*~
+*.pdf
 
 *.tex.backup

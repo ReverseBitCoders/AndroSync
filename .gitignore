@@ -52,6 +52,7 @@ Thumbs.db
 *.out
 *.toc
 *.pdf
+*.tex.swap
 
 # built application files
 *.apk
