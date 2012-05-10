@@ -1,0 +1,22 @@
+\chapter{Introduction}
+\section{Problem Statement}
+\hspace*{1.5cm}Today smart phones are not exclusive property of early adopters or IT professionals.
+Global Smart phone shipments grew a relatively healthy 43 per cent year-over-year to reach
+600 million units in Q2 2010. According to comScore’s report, 234 million Americans
+subscribed to mobile phone plans in January 2010. Of these 42.7 million owned internet
+accessible smart phones, this represented an 18 per cent increase over the three months ended
+in October.\\
+\hspace*{1.5cm}Important progress in mobile computing should start with straightforward local
+convergence of Smartphones and computer infrastructure via simplistic mobile use model.
+This use model would enhance the current synchronization schemes by by-passing the
+synchronized data over proprietary services and giving the user the full control and full
+accessibility of his/her own data both on the smart phone, as well on his very own
+synchronization server. It is not always advisable for users to use synchronization services
+provided by Google for android devices.\\
+\hspace*{1.5cm}These services may not ensure full privacy of all the data of the user. This data is
+stored on the Google clouds. Also, today the security issues in cloud computing have not
+been fully resolved. Hence it cannot be said our data remains fully secure when it is on
+Google premises. Synchronization can be done by various means by the use of this product.
+Offline and online mode synchronization is possible. Online mode can be used when user is
+on-the-go and offline synchronization may be used when user is at the office or at home.\\
+\hspace*{1.5cm}

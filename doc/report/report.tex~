@@ -16,10 +16,7 @@
 \usepackage{pslatex} % for times new roman, old package, but works
 \usepackage{array} % for making text bold in table
 \usepackage{setspace}
-\usepackage{float}
-%\usepackage{indentfirst}
-
-\def\figurename{\textbf{Figure }}
+\usepackage{indentfirst}
 
 %For inserting Python Code
 \usepackage{listings}
@@ -64,23 +61,18 @@
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{%
 %\fancyhf{} % clear all header and footer fields
-\fancyfoot[L]{\emph{Department of Computer Engineering, JSCOE, Pune}} % except the center
+\fancyfoot[L]{\emph{ADD YOUR SHORT PROJECT DESCRIPTION HERE}} % except the center
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
-%\setlength{\headsep}{0pt}
-%\addtolength{\voffset}{-5pt}
-%\setlength{\topmargin}{20pt}
-%\setlength{\textheight}{592pt}
 }
 
 \pagestyle{fancy}
-%\lhead{Chapter \thechapter}
-%\renewcommand{\chaptermark}[1]{% 
-\rhead{\emph{Android Synchronization Manager}}
-%\markboth{#1}{}} 
+\lhead{Chapter \thechapter}
+\renewcommand{\chaptermark}[1]{% 
+\markboth{#1}{}} 
 
-\fancyfoot[LO,LE]{\emph{Department of Computer Engineering, JSCOE, Pune}}
+\fancyfoot[LO,LE]{\emph{ADD YOUR SHORT PROJECT DESCRIPTION HERE}}
 \cfoot{}
 \fancyfoot[RO, RE]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -93,10 +85,9 @@
 
 %GLOBAL SETTINGS OVER, DOCUMENT BEGINS
 \begin{document}
-%\begin{spacing}{0}{
+
 %Renames "Bibliography" to "References" on ref page
-\renewcommand\bibname{References}
-\lhead{ }
+\renewcommand\bibname{References} 
 
 %FROM HERE YOUR PAGES START GETTING ADDED
 
@@ -154,5 +145,4 @@
 \input{project/conclusion.tex} % adds the Scheduling and Planning page
 \input{project/ref.tex} % adds the References page
 
-%}\end{spacing}
 \end{document}

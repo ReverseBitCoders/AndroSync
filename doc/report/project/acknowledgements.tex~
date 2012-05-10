@@ -1,0 +1,28 @@
+%\chapter*{}
+\begin{center}
+\thispagestyle{empty}
+\LARGE{\textbf{Acknowledgements}}\\[1cm]
+\end{center}
+\linespread{1.13}
+\hspace*{1.5cm}\large{We are profoundly grateful to \textbf{Prof. H. A. Hingoliwala} for his expert guidance
+and continuous encouragement throughout to see that this project rights its
+target since its commencement to its completion.}\\[1cm]
+\hspace*{1.5cm}\large{We would like to express deepest appreciation towards \textbf{Dr. M. G. Jadhav},
+Principal, Jayawantrao Sawant College of Engineering, \textbf{Prof. H. A. Hingoliwala}, 
+Head of Department of Computer Engineering and \textbf{Prof. M. D. Ingle}, Project Coordinator whose
+invaluable guidance supported us in completing this project.}\\[1cm]
+\hspace*{1.5cm}\large{At last we must express our sincere heartfelt gratitude to all the staff members
+of Computer Engineering Department who helped me directly or
+indirectly during this course of work.}\\[1.0cm]
+\begin{flushright}
+{
+Parikshit Ghodake\\
+Imran Ahmed\\
+Akshay Khole\\
+Muneeb Shaikh
+}
+\end{flushright}
+%\large{\hspace*{4.5in} }\\[0.25cm]
+%\large{\hspace*{4.5in} YYYYYYY}\\[0.25cm]
+%\large{\hspace*{4.5in} ZZZZZZZ}\\[0.25cm]
+\newpage

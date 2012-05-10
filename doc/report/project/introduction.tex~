@@ -52,8 +52,8 @@ This scenario is illustrated in figure 1.1.
   \caption{\textbf{Architecture of Current System}}
 \end{figure}
 
-\hspace*{1.5cm}It is not always possible to store sensitive information on third-party pre-\\
-mises like Google. This sensitive information can be in the form of phone logs, SMS, 
+\hspace*{1.5cm}It is not always possible to store sensitive information on third-party\\ 
+premises like Google. This sensitive information can be in the form of phone logs, SMS, 
 contacts, e-mails, notes, calendar schedules, etc.
 
 \subsection{Proposed System}
