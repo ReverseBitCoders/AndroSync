@@ -8,7 +8,10 @@
 \usepackage[top=0.70in, bottom=0.70in, left=0.8in,right=0.80in]{geometry} % setting the page alignment with this package
 \usepackage[pdftex]{graphicx} %for embedding images
 %\usepackage[hyphens]{url} %for proper url entries
-\usepackage[dvips, bookmarks, colorlinks=false]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+\usepackage[dvips, bookmarks,  colorlinks=false]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
 \usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
 \usepackage{float} %used for figure placement with H as a parameter
 %\usepackage[hyphens]{url}
