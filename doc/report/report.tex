@@ -20,14 +20,21 @@
 \usepackage{array} % for making text bold in table
 \usepackage{setspace}
 \usepackage{float}
+\usepackage{enumerate}
 %\usepackage{indentfirst}
 
+\usepackage[font=small,labelfont=bf]{caption}
 \def\figurename{\textbf{Figure }}
+%\renewcommand{\thefigure}\textbf{{\arabic{section}.\arabic{figure}}}
+%\def\thefigure{\@arabic\c@figure}
+%\def\fnum@figure{\figurename\ \textbf{\thefigure}}
+%\setlength{\parindent}{1cm}
 
 %For inserting Python Code
 \usepackage{listings}
 \usepackage{color}
 
+%\usepackage[a4,frame,center]{crop}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -101,6 +108,8 @@
 \renewcommand\bibname{References}
 \lhead{ }
 
+%\renewcommand{\thefigure}{\arabic{\textbf{section}}.\arabic{\textbf{figure}}}}
+
 %FROM HERE YOUR PAGES START GETTING ADDED
 
 % includes the cover page
@@ -149,6 +158,7 @@
 
 \input{project/introduction.tex} % adds the introduction page
 \input{project/literature-survey.tex} % adds the Literature Survey page
+\input{project/srs.tex}
 \input{project/proposed-work.tex} % adds the Project Work page
 \input{project/research-methodology.tex} % adds the Research Methodology page
 \input{project/project-design.tex} % adds the Project Design
