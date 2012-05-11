@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, AndroSyncMain!</string>
+    <string name="hello">Hello World, AndroSyncActivity!</string>
     <string name="app_name">AndroSync</string>
+    <string name="stringSyncContacts">Synchronize Contacts</string>
+    <string name="stringToastContactSync">Starting synchronizing contacts. Please wait .. </string>
+    <string name="stringSyncSMS">Synchronize SMS</string>
+    <string name="stringSyncNotes">Synchronize Notes</string>
+    <string name="syncContactsManifestLabel">Contact Sync</string>
+    <string name="buttonSyncInbox">Sync Inbox</string>
+    <string name="buttonSyncSentbox">Sync Sentbox</string>
+    <string name="buttonSyncDrafts">Sync Drafts</string>
 
 </resources>
