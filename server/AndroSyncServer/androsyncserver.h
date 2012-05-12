@@ -37,6 +37,10 @@ private slots:
 
     void on_stackedPages_currentChanged(int arg1);
 
+    void on_pushBt_Notes_clicked();
+
+    void on_pushBt_dock_Notes_clicked();
+
 private:
     Ui::AndroSyncServer *ui;
     QSqlTableModel *model;

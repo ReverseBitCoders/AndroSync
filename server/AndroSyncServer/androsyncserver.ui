@@ -333,6 +333,13 @@ p, li { white-space: pre-wrap; }
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="page_Calender">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTableView" name="tableViewCalender"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
     <item>

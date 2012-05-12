@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'androsyncserver.ui'
 **
-** Created: Sat May 12 19:47:58 2012
+** Created: Sun May 13 00:00:59 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -76,6 +76,9 @@ public:
     QWidget *tab;
     QHBoxLayout *horizontalLayout_8;
     QTableView *tableViewMissed;
+    QWidget *page_Calender;
+    QVBoxLayout *verticalLayout_4;
+    QTableView *tableViewCalender;
     QHBoxLayout *horizontalLayout_9;
     QPushButton *pushButton_Edit;
     QPushButton *pushButton_Delete;
@@ -310,6 +313,18 @@ public:
         verticalLayout_3->addWidget(tabLogs);
 
         stackedPages->addWidget(page_callLogs);
+        page_Calender = new QWidget();
+        page_Calender->setObjectName(QString::fromUtf8("page_Calender"));
+        verticalLayout_4 = new QVBoxLayout(page_Calender);
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        tableViewCalender = new QTableView(page_Calender);
+        tableViewCalender->setObjectName(QString::fromUtf8("tableViewCalender"));
+
+        verticalLayout_4->addWidget(tableViewCalender);
+
+        stackedPages->addWidget(page_Calender);
 
         verticalLayout_2->addWidget(stackedPages);
 

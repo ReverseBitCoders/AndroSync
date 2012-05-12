@@ -215,3 +215,30 @@ void AndroSyncServer::on_stackedPages_currentChanged(int arg1)
         ui->pushButton_Edit->show();
     }
 }
+
+void AndroSyncServer::on_pushBt_Notes_clicked()
+{
+    ui->stackedPages->setCurrentIndex(4);
+    ui->lblTitle->setText("<h2>Calender</h2>");
+    ui->dockSideBar->show();
+
+    model = new QSqlTableModel();
+    model->setTable("calender");
+    model->select();
+
+    ui->tableViewCalender->setModel(model);
+    ui->tableViewCalender->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+}
+
+void AndroSyncServer::on_pushBt_dock_Notes_clicked()
+{
+    ui->stackedPages->setCurrentIndex(4);
+    ui->lblTitle->setText("<h2>Calender</h2>");
+
+    model = new QSqlTableModel();
+    model->setTable("calender");
+    model->select();
+
+    ui->tableViewCalender->setModel(model);
+    ui->tableViewCalender->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+}
