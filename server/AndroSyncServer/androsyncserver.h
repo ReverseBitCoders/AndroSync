@@ -35,6 +35,8 @@ private slots:
 
     void on_tabLogs_currentChanged(int index);
 
+    void on_stackedPages_currentChanged(int arg1);
+
 private:
     Ui::AndroSyncServer *ui;
     QSqlTableModel *model;

@@ -52,8 +52,8 @@ p, li { white-space: pre-wrap; }
       <widget class="QWidget" name="page_Home">
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
            <widget class="QPushButton" name="pushBt_Contacts">
             <property name="minimumSize">
              <size>
@@ -82,7 +82,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item>
            <widget class="QPushButton" name="pushBt_Messages">
             <property name="minimumSize">
              <size>
@@ -114,7 +114,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
+          <item>
            <widget class="QPushButton" name="pushBt_Logs">
             <property name="minimumSize">
              <size>
@@ -143,7 +143,11 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
            <widget class="QPushButton" name="pushBt_Notes">
             <property name="minimumSize">
              <size>
@@ -172,7 +176,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item>
            <widget class="QPushButton" name="pushBt_Multimedia">
             <property name="minimumSize">
              <size>
@@ -201,7 +205,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
+          <item>
            <widget class="QPushButton" name="pushBt_Settings">
             <property name="minimumSize">
              <size>
@@ -330,6 +334,30 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
      </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QPushButton" name="pushButton_Edit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Edit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Delete">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
