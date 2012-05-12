@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'androsyncserver.ui'
 **
-** Created: Sat May 12 19:20:00 2012
+** Created: Sat May 12 19:47:58 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,7 +16,6 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QDockWidget>
 #include <QtGui/QFormLayout>
-#include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
@@ -42,10 +41,11 @@ public:
     QStackedWidget *stackedPages;
     QWidget *page_Home;
     QVBoxLayout *verticalLayout;
-    QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout_10;
     QPushButton *pushBt_Contacts;
     QPushButton *pushBt_Messages;
     QPushButton *pushBt_Logs;
+    QHBoxLayout *horizontalLayout_11;
     QPushButton *pushBt_Notes;
     QPushButton *pushBt_Multimedia;
     QPushButton *pushBt_Settings;
@@ -76,6 +76,9 @@ public:
     QWidget *tab;
     QHBoxLayout *horizontalLayout_8;
     QTableView *tableViewMissed;
+    QHBoxLayout *horizontalLayout_9;
+    QPushButton *pushButton_Edit;
+    QPushButton *pushButton_Delete;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -117,9 +120,9 @@ public:
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        gridLayout = new QGridLayout();
-        gridLayout->setSpacing(6);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setSpacing(6);
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         pushBt_Contacts = new QPushButton(page_Home);
         pushBt_Contacts->setObjectName(QString::fromUtf8("pushBt_Contacts"));
         pushBt_Contacts->setMinimumSize(QSize(68, 68));
@@ -129,7 +132,7 @@ public:
         pushBt_Contacts->setIcon(icon);
         pushBt_Contacts->setIconSize(QSize(64, 64));
 
-        gridLayout->addWidget(pushBt_Contacts, 0, 0, 1, 1);
+        horizontalLayout_10->addWidget(pushBt_Contacts);
 
         pushBt_Messages = new QPushButton(page_Home);
         pushBt_Messages->setObjectName(QString::fromUtf8("pushBt_Messages"));
@@ -141,7 +144,7 @@ public:
         pushBt_Messages->setIconSize(QSize(64, 64));
         pushBt_Messages->setFlat(false);
 
-        gridLayout->addWidget(pushBt_Messages, 0, 1, 1, 1);
+        horizontalLayout_10->addWidget(pushBt_Messages);
 
         pushBt_Logs = new QPushButton(page_Home);
         pushBt_Logs->setObjectName(QString::fromUtf8("pushBt_Logs"));
@@ -152,8 +155,14 @@ public:
         pushBt_Logs->setIcon(icon2);
         pushBt_Logs->setIconSize(QSize(64, 64));
 
-        gridLayout->addWidget(pushBt_Logs, 0, 2, 1, 1);
+        horizontalLayout_10->addWidget(pushBt_Logs);
 
+
+        verticalLayout->addLayout(horizontalLayout_10);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setSpacing(6);
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
         pushBt_Notes = new QPushButton(page_Home);
         pushBt_Notes->setObjectName(QString::fromUtf8("pushBt_Notes"));
         pushBt_Notes->setMinimumSize(QSize(68, 68));
@@ -163,7 +172,7 @@ public:
         pushBt_Notes->setIcon(icon3);
         pushBt_Notes->setIconSize(QSize(64, 64));
 
-        gridLayout->addWidget(pushBt_Notes, 1, 0, 1, 1);
+        horizontalLayout_11->addWidget(pushBt_Notes);
 
         pushBt_Multimedia = new QPushButton(page_Home);
         pushBt_Multimedia->setObjectName(QString::fromUtf8("pushBt_Multimedia"));
@@ -174,7 +183,7 @@ public:
         pushBt_Multimedia->setIcon(icon4);
         pushBt_Multimedia->setIconSize(QSize(64, 64));
 
-        gridLayout->addWidget(pushBt_Multimedia, 1, 1, 1, 1);
+        horizontalLayout_11->addWidget(pushBt_Multimedia);
 
         pushBt_Settings = new QPushButton(page_Home);
         pushBt_Settings->setObjectName(QString::fromUtf8("pushBt_Settings"));
@@ -185,10 +194,10 @@ public:
         pushBt_Settings->setIcon(icon5);
         pushBt_Settings->setIconSize(QSize(64, 64));
 
-        gridLayout->addWidget(pushBt_Settings, 1, 2, 1, 1);
+        horizontalLayout_11->addWidget(pushBt_Settings);
 
 
-        verticalLayout->addLayout(gridLayout);
+        verticalLayout->addLayout(horizontalLayout_11);
 
         stackedPages->addWidget(page_Home);
         page_Contacts = new QWidget();
@@ -303,6 +312,24 @@ public:
         stackedPages->addWidget(page_callLogs);
 
         verticalLayout_2->addWidget(stackedPages);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setSpacing(6);
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        pushButton_Edit = new QPushButton(centralWidget);
+        pushButton_Edit->setObjectName(QString::fromUtf8("pushButton_Edit"));
+        pushButton_Edit->setEnabled(true);
+
+        horizontalLayout_9->addWidget(pushButton_Edit);
+
+        pushButton_Delete = new QPushButton(centralWidget);
+        pushButton_Delete->setObjectName(QString::fromUtf8("pushButton_Delete"));
+        pushButton_Delete->setEnabled(true);
+
+        horizontalLayout_9->addWidget(pushButton_Delete);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_9);
 
         AndroSyncServer->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(AndroSyncServer);
@@ -424,6 +451,8 @@ public:
         tabLogs->setTabText(tabLogs->indexOf(tabIncoming), QApplication::translate("AndroSyncServer", "Incoming", 0, QApplication::UnicodeUTF8));
         tabLogs->setTabText(tabLogs->indexOf(tabOutgoing), QApplication::translate("AndroSyncServer", "Outgoing", 0, QApplication::UnicodeUTF8));
         tabLogs->setTabText(tabLogs->indexOf(tab), QApplication::translate("AndroSyncServer", "Missed", 0, QApplication::UnicodeUTF8));
+        pushButton_Edit->setText(QApplication::translate("AndroSyncServer", "Edit", 0, QApplication::UnicodeUTF8));
+        pushButton_Delete->setText(QApplication::translate("AndroSyncServer", "Delete", 0, QApplication::UnicodeUTF8));
         pushBt_dock_Multimedia->setText(QString());
         pushBt_dock_Notes->setText(QString());
         pushBt_dock_Messages->setText(QString());

@@ -12,6 +12,9 @@ AndroSyncServer::AndroSyncServer(QWidget *parent) :
     //ui->pushBt_dock_Messages->setStyleSheet("QPushButton{background-color:gray}");
     ui->dockSideBar->hide();
 
+    ui->pushButton_Edit->hide();
+    ui->pushButton_Delete->hide();
+
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setDatabaseName("AndroSync");
@@ -70,6 +73,8 @@ void AndroSyncServer::on_pushBt_dock_Home_clicked()
     ui->stackedPages->setCurrentIndex(0);
     ui->lblTitle->setText("<h2>AndroSync</h2>");
     ui->dockSideBar->hide();
+    ui->pushButton_Edit->hide();
+    ui->pushButton_Delete->hide();
 }
 
 void AndroSyncServer::on_pushBt_dock_Messages_clicked()
@@ -197,5 +202,16 @@ void AndroSyncServer::on_tabLogs_currentChanged(int index)
 
         ui->tableViewMissed->setModel(model);
         ui->tableViewMissed->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+    }
+}
+
+void AndroSyncServer::on_stackedPages_currentChanged(int arg1)
+{
+    if(ui->stackedPages->currentIndex() == 0) {
+        ui->pushButton_Delete->hide();
+        ui->pushButton_Edit->hide();
+    } else {
+        ui->pushButton_Delete->show();
+        ui->pushButton_Edit->show();
     }
 }
