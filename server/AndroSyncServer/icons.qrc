@@ -3,5 +3,12 @@
         <file>icons/contacts.png</file>
         <file>icons/message.png</file>
         <file>icons/logs.png</file>
+        <file>icons/contacts_64.png</file>
+        <file>icons/messages_64.png</file>
+        <file>icons/notes_64.png</file>
+        <file>icons/logs_64.png</file>
+        <file>icons/home_64.png</file>
+        <file>icons/multimedia.png</file>
+        <file>icons/Settings_64.png</file>
     </qresource>
 </RCC>
