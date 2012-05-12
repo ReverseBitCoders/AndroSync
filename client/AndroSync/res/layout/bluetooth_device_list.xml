@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewPairedDevices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringPairedBluetoothDevices"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listViewPairedDevices"
+        android:layout_width="fill_parent"
+        android:layout_height="178dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/textViewNonPairedDevices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringNonPairedBluetoothDevices"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listViewNonPairedDevices"
+        android:layout_width="fill_parent"
+        android:layout_height="158dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/buttonScanForDevices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.31"
+        android:text="@string/buttonScanForBTDevices" />
+
+</LinearLayout>

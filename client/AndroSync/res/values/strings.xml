@@ -11,5 +11,14 @@
     <string name="buttonSyncInbox">Sync Inbox</string>
     <string name="buttonSyncSentbox">Sync Sentbox</string>
     <string name="buttonSyncDrafts">Sync Drafts</string>
+    <string name="scanning">Scanning for Devices ... </string>
+    <string name="stringPairedBluetoothDevices">Paired Devices</string>
+    <string name="stringNonPairedBluetoothDevices">"Non Paired Devices.. "</string>
+    <string name="buttonScanForBTDevices">Scan for devices ...</string>
+    <string name="StringNoBTDevicesPaired">Zero Devices paired. </string>
+    <string name="stringSelectDevice">Select a device to connect... </string>
+    <string name="stringNoDevicesFound">No bluetooth devics found ...</string>
+    <string name="buttonStartBluetooth">Start Bluetooth Services</string>
+    <string name="buttonGetBtDeviceList">Get Bluetooth Device List</string>
 
 </resources>
