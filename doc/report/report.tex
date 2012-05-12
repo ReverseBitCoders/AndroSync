@@ -1,4 +1,4 @@
-%-----Main FIle------
+%-----Main File------
 %For Detail check out - http://firesofmay.blogspot.com/2011/10/latex-project-report-template
 %CHANGE THESE Settings ONLY IF YOU KNOW WHAT YOU DOING
 
@@ -100,6 +100,29 @@
 % Altering the Index Page Title
 %\renewcommand{\contentsname}{\begin{center}\textsc{University Of Pune \\2011 - 2012}\\[1cm]Index\end{center}} 
 
+%Page Border
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+\pgfpagesuselayout{boxed}
 
 %GLOBAL SETTINGS OVER, DOCUMENT BEGINS
 \begin{document}
@@ -162,7 +185,8 @@
 \input{project/req-analysis.tex}
 \input{project/system-design.tex}
 \input{project/testing.tex}
-\input{project/planning.tex}
+\input{
+project/planning.tex}
 %\input{project/proposed-work.tex} % adds the Project Work page
 %\input{project/research-methodology.tex} % adds the Research Methodology page
 \input{project/implementation.tex} % adds the Project Design
