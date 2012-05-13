@@ -73,7 +73,7 @@ features:
  \item and lots of other features.
 \end{itemize}
 
-\section{Android and Synchronization}
+\section{Synchronization}
 \hspace*{0.82cm}The fast paced technology has changed the world as well as its habitants. In Today’s
 global village there is no need to grab the telephone receiver and dial a specific number to
 transmit voice through cables merely to hear the voice of a beloved. Now each of us carries
@@ -113,3 +113,82 @@ backup, if necessary.\\[0.3cm]
     \includegraphics[height= 10cm, width=9cm]{project/images/data-sync}
   \caption{\textbf{Data Synchronization}}
 \end{figure}
+
+\section{Software Tools and Language Constructs}
+\hspace*{0.82cm}Android synchronization manager will be designed with the following software tools and 
+language constructs-
+\subsection{Android SDK}
+\hspace*{0.82cm}The Android software development kit (SDK) includes a comprehensive set of development tools. These include a debugger, 
+libraries, a handset emulator based on QEMU, documentation, sample code, and tutorials. Currently supported development platforms include 
+computers running Linux (any modern desktop Linux distribution), Mac OS X 10.4.9 or later, Windows XP or later. The officially supported 
+integrated development environment (IDE) is Eclipse using the Android Development Tools (ADT) Plugin, though developers may use any text 
+editor to edit Java and XML files then use command line tools (Java Development Kit and Apache Ant are required) to create, build and debug 
+Android applications as well as control attached Android devices (e.g., triggering a reboot, installing software package(s) remotely).\\[0.5cm]
+\hspace*{0.82cm}Enhancements to Android's SDK go hand in hand with the overall Android platform development. The SDK also supports older 
+versions of the Android platform in case developers wish to target their applications at older devices. Development tools are downloadable 
+components, so after one has downloaded the latest version and platform, older platforms and tools can also be downloaded for compatibility 
+testing.\\[0.5cm]
+\hspace*{0.82cm}Android applications are packaged in .apk format and stored under /data/app folder on the Android OS (the folder is 
+accessible only to root user for security reasons). APK package contains \texttt{.dex} files (compiled byte code files called Dalvik 
+executables), resource files, etc.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[height= 13cm, width=15cm]{project/images/android-sdk}
+  \caption{\textbf{Android SDK}}
+\end{figure}
+
+\subsection{Qt Framework}
+\hspace*{0.82cm}Qt is a cross-platform application framework that is widely used for developing application software with a graphical 
+user interface (GUI) (in which cases Qt is classified as a widget toolkit), and also used for developing non-GUI programs such as 
+command-line tools and consoles for servers.\\[0.5cm]
+\hspace*{0.82cm}Qt is developed by an open source project, the Qt Project, involving developers as individuals and from firms working 
+to advance Qt, such as Nokia, Digia, and others. Before the launch of the Qt Project, it was produced by Nokia's Qt Development Frameworks 
+division, which came into being after Nokia's acquisition of the Norwegian company Trolltech, the original producer of Qt. In February 
+2011 Nokia announced its decision to drop Symbian technologies and base their future smartphones on Microsoft platform instead. One 
+month later Nokia announced the sale of Qt's commercial licensing and professional services to Digia PLC, although Nokia will remain 
+the main development force behind the framework. On May 9, it was announced on the Qt Labs website that the groundwork was being laid 
+for the next major version of Qt, with the expectation that Qt 5 would be released in 2012.\\[0.5cm]
+\hspace*{0.82cm}Qt uses standard C++ but makes extensive use of a special code generator (called the Meta Object Compiler, or moc) 
+together with several macros to enrich the language. Qt can also be used in several other programming languages via language bindings. 
+It runs on the major desktop platforms and some of the mobile platforms. It has extensive internationalization support. Non-GUI 
+features include SQL database access, XML parsing, thread management, network support, and a unified cross-platform application 
+programming interface (API) for file handling.\\[0.5cm]
+\hspace*{0.82cm}Distributed under the terms of the GNU Lesser General Public License (among others), Qt is free and open source 
+software. All editions support many compilers, including the GCC C++ compiler and the Visual Studio suite.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[height= 11cm, width=17cm]{project/images/qt}
+  \caption{\textbf{Qt Framework}}
+\end{figure}
+
+\section{SQLite}
+\hspace*{0.82cm}SQLite is an ACID-compliant embedded relational database management system contained in a small (~275 kB) C 
+programming library.\\[0.5cm]
+\hspace*{0.82cm}SQLite implements most of the SQL standard, using a dynamically and weakly typed SQL syntax that does not 
+guarantee the domain integrity. In contrast to other database management systems, SQLite is not a separate process that is accessed 
+from the client application, but an integral part of it. SQLite read operations can be multitasked, though writes can only be 
+performed sequentially. The source code for SQLite is in the public domain.\\[0.5cm]
+\hspace*{0.82cm}SQLite is a popular choice for local/client storage on web browsers. It has many bindings to programming 
+languages. It is arguably the most widely deployed database engine, as it is used today by several widespread browsers, operating 
+systems, and embedded systems, among others.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=8cm, width=10cm]{project/images/sqlite}
+  \caption{\textbf{SQLite}}
+\end{figure}
+
+\section{SyncML}
+\hspace*{0.82cm}SyncML (Synchronization Markup Language) is the former name for a platform-independent information synchronization 
+standard. The project is currently referred to as Open Mobile Alliance Data Synchronization and Device Management. The purpose of 
+SyncML is to offer an open standard as a replacement for existing data synchronization solutions, which have mostly been somewhat 
+vendor-, application- or operating system specific.\\[0.5cm]
+\hspace*{0.82cm}SyncML is most commonly thought of as a method to synchronize contact and calendar information (personal 
+information manager) between some type of handheld device and a computer (personal, or network-based service), such as between a 
+mobile phone and a personal computer. The new version of the specification includes support for push email, providing a standard 
+protocol alternative to proprietary solutions like BlackBerry.\\[0.5cm]
+\hspace*{0.82cm}Several major companies such as Samsung, Motorola, Nokia, Sony Ericsson, LG, IBM and Siemens AG already support 
+SyncML in their products. Some products by now use SyncML for more generic information synchronization purposes, such as to synchronize 
+project task information across a distributed group of team members. SyncML may also be used as a base for backup solutions.

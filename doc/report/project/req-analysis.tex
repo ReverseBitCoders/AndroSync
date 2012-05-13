@@ -31,14 +31,39 @@ online synchronization.
  \item 150 MB of RAM
 \end{enumerate}
 
-\section{Analysis of Data}
-\hspace*{0.82cm}All the information collected on Android operating system is obtained from
-developer.android.com. Since Android is an open source, many of the codes are readily
-available for application development, which has rapidly added to the success of Android
-Systems. It gives budding engineers a platform for learning and development. The data
-mentioned on the website developer.android.com explains the changes to be made in the
-manifestation file for installing a new application. Moreover it explains the procedure of
-connecting a USB device to Android supported phone. The two modes of android device viz.
-Host mode and Accessory mode are mentioned on this website. These modes can be used for
-offline synchronization of the data. The data obtained from this website proves to be
-tremendously helpful in the android application development for the synchronization process.
+\section{Non-functional Requirement}
+\subsection{Security Requirements}
+\hspace*{0.82cm}In our product, security is of out-most importance. Hence we need to implement
+communication over HTTPS. For that it is required that the user should be in an environment where
+the HTTPS port is not blocked. In case these ports are not enabled, an http connection will have to be
+used. This means using http instead of https would lead to vulnerability of the user’s data to be sniffed
+by third-party. Hence this should be considered as a security requirement of the product.
+
+\subsection{Performance Requirements}
+\subsection{Safety Requirements}
+\subsection{Software Quality Attributes}
+\subsection{Stockholder and User Description}
+
+\section{External Interface Requirements}
+\subsection{Hardware Interfaces}
+\hspace*{0.82cm}Typical hardware interfaces that would be required would be the standard USB data cable
+provided with the device. No other additional hardware interfacing would be needed to be bought by
+the user. Also Bluetooth and/or Wi-Fi adapter on the server machine would be needed for
+communication (in case USB cable is not available). Communication protocol would be developer
+implemented and the user need not worry about communicating using this protocol. Hence this
+product will be extremely user-friendly.
+
+\subsection{Software Interfaces}
+\hspace*{0.82cm}The product featured, requires a database to be maintained at both the ends - client and server.
+Hence we will be deploying two different databases on both of them which will be in sync on
+demand.\\[0.5cm]
+\hspace*{0.82cm}The client DB will be implemented using SQLite and the server DB will be standard
+PostgreSQL. The UI on client will be a typical android user interface using the default options
+available at the time of development. UI on server will be implemented using Qt and python at the
+backend.
+
+\subsection{Communications Interfaces}
+\hspace*{0.82cm}This product basically works on the client-server architecture. Hence a communication
+mechanism between server and client has to be developed. This communication will be established
+over https or local Bluetooth or Wi-Fi. USB cable is another option. E-mails can be used to
+send/receive reports, log files.
