@@ -110,6 +110,7 @@ qrc_*.cpp
 *.rss
 *.app
 *~
+*.pro.user
 bld.inf
 bld.inf.*
 qmakepluginstubs/
