@@ -38,12 +38,13 @@ communication over HTTPS. For that it is required that the user should be in an 
 the HTTPS port is not blocked. In case these ports are not enabled, an http connection will have to be
 used. This means using http instead of https would lead to vulnerability of the user’s data to be sniffed
 by third-party. Hence this should be considered as a security requirement of the product.
-
 \subsection{Performance Requirements}
+The main requirement here is a good communication. If the communication lags, the purpose of the software 
+is defeated. However, this requirement is mostly a issue at the client end.
 \subsection{Safety Requirements}
-\subsection{Software Quality Attributes}
-\subsection{Stockholder and User Description}
-
+This product requires some safety concerns. The handshaking between client and server in bluetooth mode should 
+be secure.
+\newpage
 \section{External Interface Requirements}
 \subsection{Hardware Interfaces}
 \hspace*{0.82cm}Typical hardware interfaces that would be required would be the standard USB data cable

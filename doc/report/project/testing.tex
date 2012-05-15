@@ -17,6 +17,7 @@ Software testing is used in association with verification and validation:
 but later it was also seen as a separate profession. Regarding the periods and the different goals in software testing there 
 have been established different roles: test lead/manager , tester, test designer, test automater/automation developer, and test 
 administrator.\\[0.5cm]
+\newpage
 \textbf{Test plan:}\\
 \hspace*{0.82cm}It is a systematic approach to testing a system such as a machine or software. The plan typically contains a detailed understanding of what the eventual
 workflow will be.\\[0.5cm] 
@@ -56,7 +57,7 @@ matrix etc.\\[0.5cm]
 White box testing methods include creating tests to satisfy some code coverage criteria. For Example, the test designer can 
 create tests to cause all statements in the program to be executed at least once. Other examples of white box testing are mutation 
 testing and fault injection methods. White box testing includes all static testing.\\[0.5cm]
-\textbf{Alpha Testing:}\\
+\textbf{Alpha testing:}\\
 Alpha testing is simulated or actual operational testing by potential users customers or an independent test team at the developer's 
 site. Alpha testing is often employed for off-the-shelf software as a form of internal acceptance testing. Before the software goes 
 into beta testing.\\[0.5cm]
@@ -65,7 +66,7 @@ into beta testing.\\[0.5cm]
 audience outside of the programming team. The software is released to groups of people so that further testing can ensure the product 
 has few faults or bugs. Sometimes, beta version are made available to the open public to increase the feedback field to a maximal 
 number of future users.\\[0.5cm]
-\textbf{Regression Testing:}\\
+\textbf{Regression testing:}\\
 \hspace*{0.82cm}After modifying the software, either for a change in functionality or the fix defects, a regression test re-runs 
 previously passing tests on the modified software to ensure that the modifications haven't unintentionally caused a regression of 
 previous functionality. Regression testing can be performed at any or all of the above test levels. These regression tests are 
@@ -78,4 +79,41 @@ respectively is a sanity test.\\[0.5cm]
 \hspace*{0.82cm}Smoke testing is a term used in plumbing, woodwind repair, electronics and computer software development. It refers 
 to the first test made after repairs or first assembly to provide some assurance that the system under tests will catastrophically 
 fail. After a smoke test proves that the pipes will not leak, the keys seal properly, the circuit will not burn, or the software will 
-not crash outright, the assemble is ready for more stressful testing.\\[0.5cm]
+not crash outright, the assemble is ready for more stressful testing.
+\newpage
+\section{Test Cases and Test Results}
+\begin{longtable}{ | p{1cm} | p{3.5cm} | p{4cm} | p{4cm} | p{4cm} |}
+      \hline
+      \textbf{Test ID} & \textbf{Test Case Title} & \textbf{Test Condition} & \textbf{System Behavior} & \textbf{Expected Result}\\
+      \hline
+      T01 & Application Installed on Server & Check \newline application is installed or not on Server & 1. Application is not shown in list of installed packages\newline2. Application is shown in list of installed packages & 1. Application is not installed\newline2. Application is installed\\
+      \hline
+      T02 & Application Installed on Client & Check \newline application is installed or not on client &  1. Application is not shown in list of installed packages\newline2. Application is shown in list of installed packages  & 1. Application is not installed\newline2. Application is installed\\
+      \hline
+      T03 & Bluetooth is ON/OFF & Check bluetooth is on/off &  1. Bluetooth ON is shown by system\newline 2. Bluetooth OFF is shown by system & 1. Bluetooth is ON\newline 2. Bluetooth is OFF\\
+      \hline
+      T04 & WiFi is ON/OFF & Check WiFi is on/off & 1. WiFi ON is shown by system\newline 2. WiFi OFF is shown by system & 1. WiFi is ON\newline 2. WiFi is OFF\\
+      \hline
+      T05 & USB cable is connected & Check USB cable is connected or not & 1)Device is not shown by system\newline 2) Device is shown by system & 1)USB cable is connected\newline 2) USB cable is not connected\\
+      \hline
+      T06 & Check mobile is connected to server or not & Check for list of bluetooth devices connected to server & List of connected devices is shown on server & Name of device is shown in connected devices\\
+      \hline
+      T07 & Is mobile device visible & Check mobile visiblity is ON/OFF & 1) Mobile visibility is OFF\newline 2) Mobile visibility is ON & 1) Device is not shown by bluetooth\newline 2) Device is shown by bluetooth\\
+      \hline
+      T08 & Check mobile exist in list ofpaired devices & Check list of paired devices & 1) Mobile Device doesn't exist in listof paired devices\newline 2) Mobile Device exist in list of paired devices & 1) Add device in list of paired devices\newline 2) Start next process\\
+      \hline
+      T09&Enter correct passphrase&Check entered passphrase is correct&1) Entered passphrase is Wrong\newline 2) Entered passphrase is Correct&1) Device will not get added on Server\newline 2) Device will be added to Server\\
+      \hline
+      T10&Check mobile exist in list of paired devices&Check list of paired devices&1) Mobile Device doesn't exist in list of paired devices\newline 2) Mobile Device exist in list of paired devices&1) Add device in list of paired devices\newline 2) Start next process\\
+      \hline
+      T11&User account exist or not for server&Check for User Login&1) User account  Exist\newline 2) User account does not exist&1)Start next process\newline 2) Create new account\\
+      \hline
+      T12&Enter Username&Check username is correct or not1) Username is not correct\newline 2) Username is correct&1) Enter username again\newline 2) password is focused&\\
+      \hline
+      T13&Enter Password&Check password is correct or not&1) Password is not correct\newline 2) Password is correct&1) Enter password again\newline 2) user get verified\\
+      \hline
+      T14&Check for new data on mobile device&Check new data exist on mobile device or not&1) New data does not exist on mobile device\newline 2) New data exist on mobile device&1) Do nothing\newline 2) Start Synchronization\\
+      \hline
+\end{longtable}
+
+\textbf{Note: Testing should be performed manually}

@@ -11,33 +11,26 @@
 \usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
 \usepackage{float} %used for figure placement with H as a parameter
 %\usepackage[hyphens]{url}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 \usepackage{pslatex} % for times new roman, old package, but works
 \usepackage{array} % for making text bold in table
 \usepackage{setspace}
 \usepackage{float}
 \usepackage{enumerate}
-%\usepackage{indentfirst}
+\usepackage{longtable}
 
 \usepackage[font=small,labelfont=bf]{caption}
 \def\figurename{\textbf{Figure }}
-%\renewcommand{\thefigure}\textbf{{\arabic{section}.\arabic{figure}}}
-%\def\thefigure{\@arabic\c@figure}
-%\def\fnum@figure{\figurename\ \textbf{\thefigure}}
-%\setlength{\parindent}{1cm}
 
-%For inserting Python Code
 \usepackage{listings}
 \usepackage{color}
-
-%\usepackage[a4,frame,center]{crop}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
  
 \lstset{ %
-  language=Python,                % the language of the code
+  language=Java,                % the language of the code
   basicstyle=\footnotesize,           % the size of the fonts that are used for the code
   numbers=left,                   % where to put the line-numbers
   numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
@@ -62,10 +55,6 @@
   morekeywords={*,...}               % if you want to add more keywords to the set
 }
 
-%%%%For inserting Python Code Over
-
-
-
 %For the header and footer
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{%
@@ -74,10 +63,6 @@
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
-%\setlength{\headsep}{0pt}
-%\addtolength{\voffset}{-5pt}
-%\setlength{\topmargin}{20pt}
-%\setlength{\textheight}{592pt}
 }
 
 \pagestyle{fancy}
@@ -146,10 +131,6 @@
 \input{project/acknowledgements.tex} 
 \newpage
 
-% includes the company 	certificate page
-%\input{project/companycert.tex} 
-%\newpage
-
 \input{project/abstract.tex} % adds the Research Methodology page
 \newpage
 
@@ -185,10 +166,10 @@
 %\input{project/proposed-work.tex} % adds the Project Work page
 %\input{project/research-methodology.tex} % adds the Research Methodology page
 \input{project/implementation.tex} % adds the Project Design
-\input{project/screenshots.tex}
+\input{
+project/screenshots.tex}
 %\input{project/schedule.tex} % adds the Scheduling and Planning page
 \input{project/conclusion.tex} % adds the Scheduling and Planning page
 \input{project/ref.tex} % adds the References page
 
-%}\end{spacing}
 \end{document}
