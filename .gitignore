@@ -54,6 +54,7 @@ Thumbs.db
 *.tex.swap
 *.tex~
 *.tex.backup
+*.pdf
 
 # built application files
 *.apk
